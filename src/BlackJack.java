@@ -58,7 +58,7 @@ public class BlackJack {
                         player_card[i] = 11;
                     }
 
-                    player_point += player_point[i];
+                    player_point += player_card[i];
 
                     if (player_point >= 22) {
                         System.out.println("プレイヤーはバストしました");
