@@ -16,6 +16,8 @@ public class BlackJack {
         int[] player_card = new int[30];
         int[] enemy_card = new int[30];
 
+
+        // Player's Card draw
         for ( int i = 0; i < 2; i++){
             player_card[i] = rm.nextInt(13)+1;
             if (player_card[i] >= 10 ){
@@ -36,6 +38,18 @@ public class BlackJack {
                     }
                 }
             }
+
+        }
+
+        // Player's Checker
+        for( int i = 2; player_point < 22; i++){
+            System.out.println("現在、あなたの点数は、" + player_point + "です、");
+            System.out.println("もう一度引くなら[hit]、引かないなら、[stand]と入力してください");
+            System.out.print("[hit] or [stand] ?>");
+            String str = br.readLine();
+
+            switch (str)
+                case
         }
 
     }
