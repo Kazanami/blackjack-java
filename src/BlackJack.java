@@ -13,6 +13,30 @@ public class BlackJack {
 
         int num = rm.nextInt(52);
 
+        int[] player_card = new int[30];
+        int[] enemy_card = new int[30];
+
+        for ( int i = 0; i < 2; i++){
+            player_card[i] = rm.nextInt(13)+1;
+            if (player_card[i] >= 10 ){
+                player_card[i] = 10;
+            }
+
+            if (player_card[i] == 1){
+                player_card[i] = 11;
+            }
+
+            player_point += player_card[i];
+
+            if(player_point >= 22){
+                for(int i = 0; i <= player_card.length; i++){
+                    if(player_card[i] == 11){
+                        player_card[i] = 1;
+                        player_point -= 10;
+                    }
+                }
+            }
+        }
 
     }
 }
