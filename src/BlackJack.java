@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class BlackJack {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 	// write your code here
 
         //各種宣言
@@ -12,6 +12,9 @@ public class BlackJack {
         Random rm = new Random();
 
         int num = rm.nextInt(52);
+
+        // Player = プレイヤー
+        // Enemy = ディーラー
 
         int[] player_card = new int[30];
         int[] enemy_card = new int[30];
@@ -87,6 +90,9 @@ public class BlackJack {
                 }
             }
         }
+
+        System.out.println("プレイヤー最終点数:" + player_point);
+        System.out.println("ディーラー最終点数:" + enemy_point);
 
         if(enemy_point > 21 && player_point < 22){
             System.out.println("プレイヤーの勝ち");
